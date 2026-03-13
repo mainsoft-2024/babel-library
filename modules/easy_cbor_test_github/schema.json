@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Easy CBOR Module Config",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "max_recursion_depth": {
+      "anyOf": [
+        { "type": "integer", "minimum": 0 },
+        { "type": "string", "minLength": 1 }
+      ],
+      "description": "Maximum nesting depth for struct encode/decode."
+    }
+  }
+}

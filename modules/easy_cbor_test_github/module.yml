@@ -1,0 +1,21 @@
+name: easy_cbor
+version: 1.0.0
+type: module
+
+entry:
+  init: easy_cbor_init
+  loop: null
+
+requires:
+  externals:
+    - name: tinycbor
+      copy:
+        - src
+      include_paths:
+        - src
+
+params:
+  - name: max_recursion_depth
+    kind: u32
+    default: 5
+    description: Maximum nesting depth for struct encode/decode.
